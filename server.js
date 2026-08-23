@@ -20,14 +20,23 @@ app.set("view engine", "ejs");
 
 // localhost:3000/hello
 
-app.get("/hello", function (req, res) {
-  res.end(`<h1>Hello world </h1>`);
+// app.get("/hello", function (req, res) {
+//   res.end(`<h1>Hello world </h1>`);
+// });
+
+// // localhost:3000/gift
+
+// app.get("/gift", function (req, res) {
+//   res.end(`<h1 style = "background:red" >Siz sovg'alar bo'limidasiz </h1>`);
+// });
+
+app.post("/add-item", function (req, res) {
+  console.log(req.body);
+  res.send({ test: "sucess" });
 });
 
-// localhost:3000/gift
-
-app.get("/gift", function (req, res) {
-  res.end(`<h1 style = "background:red" >Siz sovg'alar bo'limidasiz </h1>`);
+app.get("/", function (req, res) {
+  res.render("harid");
 });
 
 const server = http.createServer(app);
