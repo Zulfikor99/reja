@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="/main.css" />
+
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
+
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+
+    <title>Portfolio</title>
+  </head>
+
+  <body>
+    <div class="frame">
+      <div class="main_frame">
+        <!-- ================= LEFT FRAME ================= -->
+        <div class="left_frame">
+          <!-- LEFT 1 -->
+          <div class="left_1">
+            <div class="left_1-1">
+              <img
+                src="images/profile.png"
+                width="156px"
+                height="135px"
+                alt=""
+              />
+            </div>
+
+            <div class="left_1-2"><%=user.name%></div>
+
+            <div class="left_1-3"><%=user.profession%></div>
+
+            <div class="left_icons">
+              <a class="link_href" href="">
+                <div class="icon">
+                  <img src="icon/facebook.svg" class="icon-1" />
+                </div>
+              </a>
+
+              <a class="link_href" href="">
+                <div class="icon">
+                  <img src="icon/instagram.svg" class="icon-1" />
+                </div>
+              </a>
+
+              <a class="link_href" href="">
+                <div class="icon">
+                  <img src="icon/twitter.svg" class="icon-1" />
+                </div>
+              </a>
+
+              <a class="link_href" href="">
+                <div class="icon">
+                  <img src="icon/linkedin.svg" class="icon-1" />
+                </div>
+              </a>
+
+              <a class="link_href" href="">
+                <div class="icon">
+                  <img src="icon/youtube.svg" class="icon-1" />
+                </div>
+              </a>
+
+              <a class="link_href" href="">
+                <div class="icon">
+                  <img src="icon/dribbble.svg" class="icon-1" />
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="marginer"></div>
+
+          <!-- LEFT 2 -->
+          <div class="left_2">
+            <div class="info_item">
+              <span class="info_title">Age:</span>
+              <span class="info_value"><%=user.age%></span>
+            </div>
+
+            <div class="info_item">
+              <span class="info_title">Residence:</span>
+              <span class="info_value"><%=user.residence%></span>
+            </div>
+
+            <div class="info_item">
+              <span class="info_title">Freelance:</span>
+              <span class="info_value active"><%=user.freelance%></span>
+            </div>
+
+            <div class="info_item">
+              <span class="info_title">Address:</span>
+              <span class="info_value"><%=user.address%></span>
+            </div>
+          </div>
+
+          <div class="marginer"></div>
+
+          <!-- LEFT 3 - LANGUAGES -->
+          <div class="left_3">
+            <div class="languages_block">
+              <h3 class="block_title">Languages</h3>
+
+              <!-- Uzbek -->
+              <div class="lang_item">
+                <div class="lang_info">
+                  <span class="lang_name"><%=user.languages[0]%></span>
+                  <span class="lang_percent">100%</span>
+                </div>
+
+                <div class="progress_bar">
+                  <div class="progress_fill fill-100"></div>
+                </div>
+              </div>
+
+              <!-- English -->
+              <div class="lang_item">
+                <div class="lang_info">
+                  <span class="lang_name"><%=user.languages[2]%></span>
+                  <span class="lang_percent">80%</span>
+                </div>
+
+                <div class="progress_bar">
+                  <div class="progress_fill fill-80"></div>
+                </div>
+              </div>
+
+              <!-- Korean -->
+              <div class="lang_item">
+                <div class="lang_info">
+                  <span class="lang_name"><%=user.languages[1]%></span>
+                  <span class="lang_percent">70%</span>
+                </div>
+
+                <div class="progress_bar">
+                  <div class="progress_fill fill-70"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="marginer"></div>
+
+          <!-- LEFT 4 - SKILLS -->
+          <div class="left_4">
+            <div class="skills_block">
+              <h3 class="block_title">Skills</h3>
+
+              <!-- HTML -->
+              <div class="skill_item">
+                <div class="skill_info">
+                  <span class="skill_name"><%=user.skills[0]%></span>
+                  <span class="skill_percent">90%</span>
+                </div>
+
+                <div class="progress_bar">
+                  <div class="progress_fill fill-90"></div>
+                </div>
+              </div>
+
+              <!-- CSS -->
+              <div class="skill_item">
+                <div class="skill_info">
+                  <span class="skill_name"><%=user.skills[1]%></span>
+                  <span class="skill_percent">85%</span>
+                </div>
+
+                <div class="progress_bar">
+                  <div class="progress_fill fill-85"></div>
+                </div>
+              </div>
+
+              <!-- JavaScript -->
+              <div class="skill_item">
+                <div class="skill_info">
+                  <span class="skill_name"><%=user.skills[2]%></span>
+                  <span class="skill_percent">80%</span>
+                </div>
+
+                <div class="progress_bar">
+                  <div class="progress_fill fill-80"></div>
+                </div>
+              </div>
+
+              <!-- PHP -->
+              <div class="skill_item">
+                <div class="skill_info">
+                  <span class="skill_name"><%=user.skills[3]%></span>
+                  <span class="skill_percent">75%</span>
+                </div>
+
+                <div class="progress_bar">
+                  <div class="progress_fill fill-75"></div>
+                </div>
+              </div>
+
+              <!-- WordPress -->
+              <div class="skill_item">
+                <div class="skill_info">
+                  <span class="skill_name"><%=user.skills[4]%></span>
+                  <span class="skill_percent">85%</span>
+                </div>
+
+                <div class="progress_bar">
+                  <div class="progress_fill fill-85"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="marginer"></div>
+
+          <!-- LEFT 5 -->
+          <div class="left_5">
+            <div class="extra_skills">
+              <h2>Extra Skills</h2>
+
+              <div class="extra_skill_item">
+                <img src="./skill_icon/skill_icon.svg" alt="skill icon" />
+                <span><%=user.extra_skills[0]%></span>
+              </div>
+
+              <div class="extra_skill_item">
+                <img src="./skill_icon/skill_icon.svg" alt="skill icon" />
+                <span><%=user.extra_skills[1]%></span>
+              </div>
+
+              <div class="extra_skill_item">
+                <img src="./skill_icon/skill_icon.svg" alt="skill icon" />
+                <span><%=user.extra_skills[2]%></span>
+              </div>
+
+              <div class="extra_skill_item">
+                <img src="./skill_icon/skill_icon.svg" alt="skill icon" />
+                <span><%=user.extra_skills[3]%></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="marginer"></div>
+        </div>
+
+        <!-- ================= MIDDLE FRAME ================= -->
+        <div class="midd_frame">
+          <div class="midd_1">
+            <div class="mid_1_left">
+              <div class="mid_1_left_heading">
+                <h1><%=user.work_place%></h1>
+              </div>
+              <div class="mid_1_left_description">
+                <span><%=user.service_desc%></span>
+              </div>
+              <div class="mid_1_left_btn">
+                <img src="btn_icon/hire.svg" alt="" />
+              </div>
+            </div>
+            <div class="mid_1_right">
+              <div class="your_image">
+                <img
+                  src="images/your_image.png"
+                  width="326px"
+                  height="446px"
+                  alt=""
+                />
+              </div>
+            </div>
+            <img src="midd_1icons/icon1.svg" class="deco deco-1" alt="" />
+            <img src="midd_1icons/icon2.svg" class="deco deco-2" alt="" />
+            <img src="midd_1icons/icon3.svg" class="deco deco-3" alt="" />
+            <img src="midd_1icons/icon4.svg" class="deco deco-4" alt="" />
+            <img src="midd_1icons/icon5.svg" class="deco deco-5" alt="" />
+            <img src="midd_1icons/icon6.svg" class="deco deco-6" alt="" />
+            <img src="midd_1icons/icon7.svg" class="deco deco-7" alt="" />
+          </div>
+
+          <!-- ============mid_2========== -->
+          <div class="midd_2">
+            <div class="services_header">
+              <h2>My Services</h2>
+              <p>
+                Amet Minim Mollit Non Deserunt Ullamco Est Sit Aliqua Dolor Do
+                Amet Sint. Velit Officia Consequat Duis Enim Velit Mollit. Lorem
+                Ipsum
+              </p>
+            </div>
+
+            <div class="services_grid">
+              <div class="service_card">
+                <img src="icon/web-dev.svg" alt="" />
+                <h3>Web Development</h3>
+                <p>Blog, E-Commerce</p>
+              </div>
+
+              <div class="service_card">
+                <img src="icon/ui-ux.svg" alt="" />
+                <h3>UI/UX Design</h3>
+                <p>Mobile App, Website Design</p>
+              </div>
+
+              <div class="service_card">
+                <img src="icon/sound.svg" alt="" />
+                <h3>Sound Design</h3>
+                <p>Voice Over, Beat Making</p>
+              </div>
+
+              <div class="service_card">
+                <img src="icon/game.svg" alt="" />
+                <h3>Game Design</h3>
+                <p>Character Design, Props & Objects</p>
+              </div>
+
+              <div class="service_card">
+                <img src="icon/photo.svg" alt="" />
+                <h3>Photography</h3>
+                <p>Portrait, Product Photography</p>
+              </div>
+
+              <div class="service_card service_card-highlight">
+                <h3>Advertising</h3>
+                <p>
+                  Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit. Vitae
+                  Nulla Diam In Ac Dictum A Urna Viverra Morbi.
+                </p>
+                <a href="#" class="order_now">ORDER NOW &gt;</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ================= RIGHT FRAME ================= -->
+        <div class="right_frame">
+          <div class="right_1">
+            <img src="menu_icon/Contrast.svg" alt="" />
+          </div>
+
+          <div class="right_2">
+            <img src="menu_icon/Menu.svg" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

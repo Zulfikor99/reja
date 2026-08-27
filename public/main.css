@@ -1,0 +1,599 @@
+.frame {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: aliceblue;
+}
+
+.frame .main_frame {
+  position: relative;
+  width: 1440px;
+  height: 1312px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 2px;
+  background-color: rgb(233, 233, 233);
+}
+
+.frame .main_frame .left_frame {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 305px;
+  height: 1315px;
+  background-color: white;
+}
+
+.frame .main_frame .midd_frame {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 970px;
+  height: 1312px;
+  margin-left: 34px;
+  margin-right: 22px;
+}
+
+.frame .main_frame .right_frame {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 108px;
+  height: 1315px;
+  background-color: white;
+}
+/* <!-- ================= LEFT FRAME ================= --> */
+
+.frame .main_frame .left_frame .left_1 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 47px;
+  margin-left: 47px;
+  margin-right: 30px;
+  margin-bottom: 54px;
+  width: 228px;
+  height: 253px;
+}
+
+.main_frame .left_frame .left_1 .left_1_1 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 27px;
+  width: 156px;
+  height: 135px;
+}
+.main_frame .left_frame .left_1 .left_1-2 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 66.63px;
+  height: 20.9px;
+  margin-bottom: 6.65px;
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 123.6%;
+  text-transform: capitalize;
+  color: #2b2b2b;
+}
+.main_frame .left_frame .left_1 .left_1-3 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 147px;
+  height: 24px;
+  margin-bottom: 17.62px;
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 123.6%;
+}
+
+.left_icons {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 228px;
+  height: 22px;
+}
+
+.link_href {
+  text-decoration: none;
+  color: black;
+}
+
+.icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #ffb400;
+  filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.icon-1 {
+  width: 14.58px;
+  height: 12.6px;
+  display: block;
+  object-fit: contain;
+}
+.frame .main_frame .left_frame .marginer {
+  position: relative;
+  margin-left: 47px;
+  margin-right: 38px;
+  width: 220px;
+  height: 0px;
+  border: 2px solid #f0f0f0;
+}
+
+.frame .main_frame .left_frame .left_2 {
+  position: relative;
+  width: 221px;
+  height: 126px;
+  margin-left: 47px;
+  margin-right: 30px;
+  margin-top: 24px;
+  margin-bottom: 25px;
+}
+
+.info_item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 221px;
+  height: 24px;
+  margin-bottom: 9px;
+}
+
+.info_title {
+  background-color: #ffb400;
+  padding: 2px 6px;
+  font-weight: 500;
+  color: #2b2b2b;
+}
+
+.info_value {
+  color: #2b2b2b;
+  font-weight: 400;
+}
+
+.info_value.active {
+  color: #7eb693;
+}
+/* <!-- ================= LEFT 3 ================= --> */
+.left_3 {
+  width: 220px;
+  height: 153px;
+  margin-left: 47px;
+  margin-right: 38px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.languages_block {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.block_title {
+  font-size: 18px;
+  font-weight: 500;
+  color: #2b2b2b;
+  width: 95px;
+  height: 20px;
+  margin: 0;
+}
+
+.lang_item {
+  width: 219px;
+  height: auto;
+  margin: 0;
+}
+
+.lang_info {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  font-size: 15px;
+  color: #767676;
+}
+.lang_name {
+  font-size: 15px;
+}
+
+.progress_bar {
+  width: 100%;
+  height: 4px;
+  margin-top: 5px;
+  padding: 0.5px;
+
+  border: 0.5px solid #ffb400;
+  border-radius: 10px;
+  box-sizing: border-box;
+  overflow: hidden;
+
+  background-color: transparent;
+}
+
+.progress_fill {
+  height: 100%;
+  background-color: #ffb400;
+}
+
+.fill-100 {
+  width: 100%;
+}
+
+.fill-80 {
+  width: 80%;
+}
+
+.fill-70 {
+  width: 70%;
+}
+
+/* <!-- ================= LEFT 4 ================= --> */
+.left_4 {
+  width: 220px;
+  height: 242px;
+  margin-left: 47px;
+  margin-right: 38px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.skills_block {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.skills_block .block_title {
+  font-size: 18px;
+  font-weight: 500;
+  color: #2b2b2b;
+  width: 95px;
+  height: 20px;
+  margin: 0;
+}
+
+.skill_item {
+  width: 100%;
+  height: auto;
+  margin: 0;
+}
+
+.skill_info {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 15px;
+  color: #767676;
+}
+.skill_name {
+  font-size: 15px;
+}
+
+.skills_block .progress_bar {
+  width: 100%;
+  height: 4px;
+  margin-top: 5px;
+  border: 1px solid #ffb400;
+  border-radius: 10px;
+  box-sizing: border-box;
+  overflow: hidden;
+  background-color: transparent;
+}
+
+.skills_block .progress_fill {
+  height: 100%;
+  background-color: #ffb400;
+}
+
+.skills_block .fill-90 {
+  width: 90%;
+}
+
+.skills_block .fill-85 {
+  width: 85%;
+}
+
+.skills_block .fill-80 {
+  width: 80%;
+}
+
+.skills_block .fill-75 {
+  width: 75%;
+}
+
+/* <!-- ================= LEFT 5 ================= --> */
+.left_5 {
+  width: 186px;
+  height: 148px;
+  box-sizing: border-box;
+  margin-left: 47px;
+  margin-right: 72px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.left_5 .extra_skills {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.left_5 .extra_skills h2 {
+  margin: 0 0 12px 0;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1;
+  color: #333;
+}
+
+.left_5 .extra_skill_item {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 20px;
+  margin-bottom: 5px;
+  box-sizing: border-box;
+}
+
+.left_5 .extra_skill_item img {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+  margin-right: 8px;
+}
+
+.left_5 .extra_skill_item span {
+  min-width: 0;
+
+  font-size: 15px;
+  line-height: 1;
+
+  color: #777;
+
+  white-space: nowrap;
+}
+/* <!-- ================= MID FRAME ================= --> */
+.frame .main_frame .midd_frame .midd_1 {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  width: 971px;
+  height: 454px;
+  margin-right: 22px;
+  margin-bottom: 148.37px;
+  margin-top: 0;
+  background-color: white;
+}
+.midd_frame .midd_1 .mid_1_left {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 581px;
+  height: 454px;
+  margin-left: 56px;
+}
+
+.midd_1 .mid_1_left .mid_1_left_heading {
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 22px;
+  margin-top: 99.15px;
+  margin-bottom: 17.11px;
+  width: 499px;
+  height: 116px;
+  color: #2b2b2b;
+}
+
+.midd_1 .mid_1_left .mid_1_left_heading h1 {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+.midd_1 .mid_1_left .mid_1_left_description {
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  width: 424px;
+  height: 85.61px;
+  margin-bottom: 25.78px;
+  color: #767676;
+}
+
+.midd_1 .mid_1_left .mid_1_left_description span {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+.midd_frame .midd_1 .mid_1_right {
+  margin-right: 64px;
+}
+.your_image img {
+  width: 326px;
+  height: 446px;
+  margin-right: 64px;
+}
+
+.midd_1 .deco {
+  position: absolute;
+  pointer-events: none;
+  width: 18px;
+}
+
+.deco-1 {
+  top: 100px;
+  right: 60px;
+}
+
+.deco-2 {
+  top: 430px;
+  right: 41px;
+}
+
+.deco-3 {
+  top: 51px;
+  left: 32px;
+}
+.deco-4 {
+  top: 433px;
+  left: 80px;
+}
+.deco-5 {
+  top: 344px;
+  left: 366px;
+}
+.deco-6 {
+  top: 73px;
+  left: 512px;
+}
+.deco-7 {
+  top: 392px;
+  left: 550px;
+}
+/* <!-- ================= MIDD 2 ================= --> */
+.midd_2 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 971px;
+  height: 653px;
+  margin-right: 27px;
+  margin-bottom: 56px;
+  background-color: rgb(233, 233, 233);
+}
+.midd_2 .services_header {
+  text-align: center;
+  padding: 40px 0 30px;
+  background-color: rgb(233, 233, 233);
+}
+
+.midd_2 .services_header h2 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #2b2b2b;
+  margin: 0 0 20px 0;
+}
+
+.midd_2 .services_header p {
+  font-size: 16px;
+  color: #767676;
+  line-height: 1.6;
+  max-width: 780px;
+  margin: 0 auto;
+}
+.midd_2 .services_grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  flex: 1;
+  gap: 20px;
+}
+
+.midd_2 .service_card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #eee;
+  box-sizing: border-box;
+}
+
+.midd_2 .service_card img {
+  width: 64px;
+  height: 64px;
+  margin-bottom: 20px;
+}
+
+.midd_2 .service_card h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #2b2b2b;
+  margin: 0 0 12px 0;
+}
+
+.midd_2 .service_card p {
+  font-size: 14px;
+  color: #767676;
+  margin: 0;
+}
+.midd_2 .service_card-highlight {
+  text-align: left;
+  align-items: flex-start;
+}
+
+.midd_2 .service_card-highlight p {
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.midd_2 .order_now {
+  color: #ffb400;
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+}
+
+/* <!-- ================= RIGHT FRAME ================= --> */
+
+.frame .main_frame .right_frame .right_1 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 30px;
+  height: 30px;
+  margin-top: 50px;
+  margin-left: 39px;
+  margin-right: 39px;
+  margin-bottom: 174px;
+}
+
+.frame .main_frame .right_frame .right_2 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 65px;
+  height: 493px;
+  margin-left: 21px;
+  margin-right: 22px;
+  margin-bottom: 568px;
+}

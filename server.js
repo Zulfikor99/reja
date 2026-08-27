@@ -2,6 +2,16 @@ console.log("Web serverni boshlash");
 const express = require("express");
 const app = express();
 const http = require("http");
+const fs = require("fs");
+
+let user;
+fs.readFile("database/user.json", "utf-8", (err, data) => {
+  if (err) {
+    console.log("ERROR:", err);
+  } else {
+    user = JSON.parse(data);
+  }
+});
 
 // Section 1
 
@@ -18,18 +28,6 @@ app.set("view engine", "ejs");
 
 // Section 4: Routing
 
-// localhost:3000/hello
-
-// app.get("/hello", function (req, res) {
-//   res.end(`<h1>Hello world </h1>`);
-// });
-
-// // localhost:3000/gift
-
-// app.get("/gift", function (req, res) {
-//   res.end(`<h1 style = "background:red" >Siz sovg'alar bo'limidasiz </h1>`);
-// });
-
 app.post("/add-item", function (req, res) {
   console.log(req.body);
   res.send({ test: "sucess" });
@@ -37,6 +35,11 @@ app.post("/add-item", function (req, res) {
 
 app.get("/", function (req, res) {
   res.render("harid");
+});
+
+app.get("/author", (req, res) => {
+
+  res.render("author", { user: user });
 });
 
 const server = http.createServer(app);
