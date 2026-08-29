@@ -34,11 +34,10 @@ app.post("/add-item", function (req, res) {
 });
 
 app.get("/", function (req, res) {
-  res.render("harid");
+  res.render("reja");
 });
 
 app.get("/author", (req, res) => {
-
   res.render("author", { user: user });
 });
 

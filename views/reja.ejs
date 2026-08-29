@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="uz">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reja va Maqsadlar</title>
+    <style>
+      :root {
+        --bg: #c3c1d6;
+        --panel: #eceef2;
+        --border: #d7d9e0;
+        --text: #2f2f38;
+        --blue: #4f6ef7;
+        --blue-hover: #3f5be0;
+        --red: #c1595c;
+        --red-hover: #ab4b4e;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        background: var(--bg);
+        font-family:
+          "Segoe UI",
+          system-ui,
+          -apple-system,
+          sans-serif;
+        color: var(--text);
+        padding: 60px 40px;
+      }
+
+      h1 {
+        text-align: center;
+        font-weight: 400;
+        font-size: 56px;
+        letter-spacing: 2px;
+        margin: 20px 0 40px;
+      }
+
+      .container {
+        max-width: 1100px;
+        margin: 0 auto;
+      }
+
+      .input-bar {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        background: var(--panel);
+        border: 1px solid var(--border);
+        border-radius: 10px;
+        padding: 16px;
+      }
+
+      .input-bar input {
+        flex: 1;
+        padding: 14px 18px;
+        border-radius: 8px;
+        border: 2px solid #b9c6f5;
+        font-size: 16px;
+        outline: none;
+      }
+
+      .input-bar input:focus {
+        border-color: var(--blue);
+      }
+
+      .btn {
+        border: none;
+        border-radius: 999px;
+        padding: 15px 26px;
+        font-size: 16px;
+        font-weight: 500;
+        color: #fff;
+        cursor: pointer;
+        white-space: nowrap;
+      }
+
+      .btn-add {
+        background: var(--blue);
+      }
+      .btn-add:hover {
+        background: var(--blue-hover);
+      }
+
+      .btn-clear {
+        background: var(--red);
+        margin-top: 26px;
+      }
+      .btn-clear:hover {
+        background: var(--red-hover);
+      }
+
+      .plans-list {
+        margin-top: 26px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .plan-item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: #ffffff;
+        border: 1px solid #e2e3ea;
+        border-radius: 10px;
+        padding: 16px 20px;
+        font-size: 16px;
+      }
+
+      .plan-item form {
+        margin: 0;
+      }
+
+      .plan-item button {
+        border: none;
+        background: transparent;
+        color: var(--red);
+        font-size: 19px;
+        cursor: pointer;
+        line-height: 1;
+        padding: 5px 9px;
+        border-radius: 6px;
+      }
+
+      .plan-item button:hover {
+        background: #f6e4e4;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>REJA VA MAQSADLAR</h1>
+
+    <div class="container">
+      <form class="input-bar" action="/add-item" method="POST">
+        <input type="text" name="text" placeholder="Yangi reja kiriting..." />
+        <button type="submit" class="btn btn-add">Yangi Reja Qoshish</button>
+      </form>
+
+      <form action="/delete-all" method="POST">
+        <button type="submit" class="btn btn-clear">
+          Hamma Rejalarni O'chirish
+        </button>
+      </form>
+
+      <div class="plans-list"></div>
+    </div>
+  </body>
+</html>
