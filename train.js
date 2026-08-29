@@ -2,6 +2,22 @@
 
 console.log("Train area");
 
+function countLetter(letter, word) {
+  let count = 0;
+  for (let i = 0; i < word.length; i++) {
+    if (letter === word[i]) {
+      count++;
+    }
+  }
+  console.log(`${letter} harfi ${count} marta qatnashgan`);
+}
+countLetter("e", "engineer");
+countLetter("n", "engineer");
+countLetter("g", "engineer");
+countLetter("i", "engineer");
+countLetter("r", "engineer");
+countLetter("a", "engineer");
+
 // console.log("Jack Ma maslahatlari");
 
 // const list = [
@@ -36,35 +52,35 @@ console.log("Train area");
 
 // ===========Asynchronous functionlarni qo'llash==============
 
-const list = [
-  "yaxshi talaba boling", // 0-20
-  "togri boshliq tanlang va koproq hato qiling", // 20-30
-  "uzingizga ishlashingizni boshlang", // 30-40
-  "siz kuchli bolgan narsalarni qiling", // 40-50
-  "yoshlarga investitsiya qiling", // 50-60
-  "endi dam oling, foydasi yoq endi", // 60
-];
+// const list = [
+//   "yaxshi talaba boling", // 0-20
+//   "togri boshliq tanlang va koproq hato qiling", // 20-30
+//   "uzingizga ishlashingizni boshlang", // 30-40
+//   "siz kuchli bolgan narsalarni qiling", // 40-50
+//   "yoshlarga investitsiya qiling", // 50-60
+//   "endi dam oling, foydasi yoq endi", // 60
+// ];
 
-async function maslahatBering(a) {
-  if (typeof a !== "number") throw new Error("insert a number");
-  else if (a <= 20) return list[0];
-  else if (a > 20 && a <= 30) return list[1];
-  else if (a > 30 && a <= 40) return list[2];
-  else if (a > 40 && a <= 50) return list[3];
-  else if (a > 50 && a <= 60) return list[4];
-  else {
-    return list[5];
+// async function maslahatBering(a) {
+//   if (typeof a !== "number") throw new Error("insert a number");
+//   else if (a <= 20) return list[0];
+//   else if (a > 20 && a <= 30) return list[1];
+//   else if (a > 30 && a <= 40) return list[2];
+//   else if (a > 40 && a <= 50) return list[3];
+//   else if (a > 50 && a <= 60) return list[4];
+//   else {
+//     return list[5];
 
-    // return new Promise((resolve,reject) => {  5 sekund await qiladi va kyn undan kyngi operationlar bajariladi
-    //   setTimeout(() => {
-    //     resolve(list[5]);
-    //   },5000);
-    // });
-    // setTimeout(function () { // async ichida setTimeout ishlamaydi Promise function bn ishlatsak buladi.
-    //   return list[5];
-    // }, 5000);
-  }
-}
+//     // return new Promise((resolve,reject) => {  5 sekund await qiladi va kyn undan kyngi operationlar bajariladi
+//     //   setTimeout(() => {
+//     //     resolve(list[5]);
+//     //   },5000);
+//     // });
+//     // setTimeout(function () { // async ichida setTimeout ishlamaydi Promise function bn ishlatsak buladi.
+//     //   return list[5];
+//     // }, 5000);
+//   }
+// }
 // call via then(). and catch().
 
 // console.log("passed here 0");
@@ -79,13 +95,13 @@ async function maslahatBering(a) {
 
 // function ichida function yozib chalkashib ketmaslik uchun asyn va await dn foydalanmz
 
-async function run() {
-  let javob = await maslahatBering(20);
-  console.log(javob);
-  javob = await maslahatBering(31);
-  console.log(javob);
-  javob = await maslahatBering(41);
-  console.log(javob);
-}
-run();
+// async function run() {
+//   let javob = await maslahatBering(20);
+//   console.log(javob);
+//   javob = await maslahatBering(31);
+//   console.log(javob);
+//   javob = await maslahatBering(41);
+//   console.log(javob);
+// }
+// run();
 // Task B
