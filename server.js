@@ -1,48 +1,28 @@
-console.log("Web serverni boshlash");
-const express = require("express");
-const app = express();
 const http = require("http");
-const fs = require("fs");
+const mongodb = require("mongodb");
+require("dotenv").config();
 
-let user;
-fs.readFile("database/user.json", "utf-8", (err, data) => {
-  if (err) {
-    console.log("ERROR:", err);
-  } else {
-    user = JSON.parse(data);
+let db;
+const connectionString = process.env.MONGO_URI;
+
+mongodb.connect(
+  connectionString,
+  {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  },
+  (err, client) => {
+    if (err) console.log("ERROR on connection MongoDB");
+    else {
+      console.log("MongoDB connection succeed");
+      module.exports = client;
+
+      const app = require("./app");
+      const server = http.createServer(app);
+      let PORT = 3000;
+      server.listen(PORT, function () {
+        console.log(`The server is working at localhost: ${PORT}`);
+      });
+    }
   }
-});
-
-// Section 1
-
-app.use(express.static("public"));
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
-
-//Section 2 : Session
-
-// Section 3: Views code( Backend da front end yasaymiz)
-
-app.set("views", "views");
-app.set("view engine", "ejs");
-
-// Section 4: Routing
-
-app.post("/add-item", function (req, res) {
-  console.log(req.body);
-  res.send({ test: "sucess" });
-});
-
-app.get("/", function (req, res) {
-  res.render("reja");
-});
-
-app.get("/author", (req, res) => {
-  res.render("author", { user: user });
-});
-
-const server = http.createServer(app);
-let PORT = 3000;
-server.listen(PORT, function () {
-  console.log(`The server is working at localhost: ${PORT}`);
-});
+);
