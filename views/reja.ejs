@@ -131,6 +131,65 @@
       .plan-item button:hover {
         background: #f6e4e4;
       }
+      /* ============================== */
+
+      /* Ro'yxat konteyneri */
+      #item-list {
+        padding-bottom: 3rem; /* pb-5 */
+        list-style: none;
+        margin: 0;
+      }
+
+      /* Ro'yxat elementi */
+      .list-group-item-info {
+        display: flex; /* d-flex */
+        align-items: center; /* align-items-center */
+        justify-content: space-between; /* justify-content-between */
+        padding: 0.75rem 1.25rem;
+        margin-bottom: -1px;
+        background-color: #d1ecf1; /* Bootstrap info rangi */
+        color: #0c5460;
+        border: 1px solid #bee5eb;
+        border-radius: 0.25rem;
+      }
+
+      /* Matn qismi */
+      .item-text {
+        font-weight: 500;
+      }
+
+      /* Tugmalar uchun umumiy stil */
+      .btn-sm {
+        padding: 0.25rem 0.5rem;
+        font-size: 0.875rem;
+        line-height: 1.5;
+        border-radius: 0.2rem;
+        cursor: pointer;
+        border: 1px solid transparent;
+      }
+
+      /* O'zgartirish tugmasi */
+      .btn-secondary {
+        color: #fff;
+        background-color: #6c757d;
+        border-color: #6c757d;
+      }
+
+      .mr-1 {
+        margin-right: 0.25rem; /* mr-1 */
+      }
+
+      /* O'chirish tugmasi */
+      .btn-danger {
+        color: #fff;
+        background-color: #dc3545;
+        border-color: #dc3545;
+      }
+      #item-list {
+        margin-top: 20px; /* Tepadan kerakli masofani kiriting (masalan: 15px, 20px, 30px) */
+        padding-bottom: 3rem;
+        list-style: none;
+      }
     </style>
   </head>
   <body>
@@ -138,17 +197,33 @@
 
     <div class="container">
       <form class="input-bar" action="/add-item" method="POST">
-        <input type="text" name="text" placeholder="Yangi reja kiriting..." />
+        <input type="text" name="reja" placeholder="Yangi reja kiriting..." />
         <button type="submit" class="btn btn-add">Yangi Reja Qoshish</button>
       </form>
 
+
+      <ul id="item-list" class="list-group pb-5 ">
+        <%items.map(function(item) { %>
+            <li
+          class="list-group-item list-group-item-info d-flex align-items-center justify-content-between"
+        >
+          <span class="item-text"><%=item.reja%></span>
+          <div>
+            <button data-id = "<%=item._id %>" class="edit-me btn btn-secondary btn-sm mr-1">
+              Ozgartirish
+            </button>
+            <button data-id = "<%=item._id %>" class="delete-me btn btn-danger btn-sm">Ochirish</button>
+          </div>
+        </li>
+
+        <%})%>
+
+      </ul>
       <form action="/delete-all" method="POST">
         <button type="submit" class="btn btn-clear">
           Hamma Rejalarni O'chirish
         </button>
       </form>
-
-      <div class="plans-list"></div>
     </div>
   </body>
 </html>
