@@ -1,4 +1,54 @@
 console.log("Train area");
+console.log("=========Task C=========");
+
+/*  Shunday class tuzing tuzing nomi Shop, va uni constructoriga 3 hil mahsulot pass bolsin,
+    hamda classning 3ta methodi bolsin, biri qoldiq, biri sotish va biri qabul. Har bir method
+    ishga tushgan vaqt ham log qilinsin.MASALAN: const shop = new Shop(4, 5, 2); shop.qoldiq()
+    return hozir 20:40da 4ta non, 5ta lagmon va 2ta cola mavjud!
+    shop.sotish('non',
+    3) & shop.qabul('cola',
+    4) & shop.qoldiq() return hozir 20:50da 1ta non, 5ta lagmon va 6ta cola mavjud!
+*/
+const time = require("moment")().format("HH:mm");
+class Shop {
+  constructor(non, lagmon, cola) {
+    this.non = non;
+    this.lagmon = lagmon;
+    this.cola = cola;
+  }
+  // Methods
+  qabul(mahsulot, miqdor) {
+    this[mahsulot] += miqdor;
+    console.log(`Hozir ${time} da ${miqdor}ta ${mahsulot} qabul qilindi `);
+  }
+
+  sotish(mahsulot, miqdor) {
+    if (this[mahsulot] >= miqdor) {
+      this[mahsulot] -= miqdor;
+      console.log(`Hozir ${time} da ${miqdor}ta ${mahsulot} sotildi `);
+    }
+  }
+
+  qoldiq() {
+    console.log(
+      `Hozir ${time} da ${this.non}ta non, ${this.lagmon}ta lagmon va ${this.cola}ta cola mavjud!`
+    );
+  }
+}
+
+const shop = new Shop(4, 5, 2);
+// Call methods
+shop.qoldiq();
+console.log("=======Before========");
+shop.qabul("cola", 8);
+shop.qabul("lagmon", 3);
+shop.qabul("non", 5);
+shop.sotish("non", 4);
+shop.sotish("cola", 5);
+shop.sotish("lagmon", 3);
+console.log("=======After========");
+shop.qoldiq();
+
 console.log("=========Task B=========");
 // Task B
 
