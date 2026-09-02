@@ -38,7 +38,6 @@ app.post("/add-item", function (req, res) {
   db.collection("plans").insertOne({ reja: new_reja }, (err, data) => {
     res.json(data.ops[0]);
   });
-  res.send({ test: "sucess" });
 });
 
 app.post("/delete-item", (req, res) => {
@@ -48,7 +47,6 @@ app.post("/delete-item", (req, res) => {
     { _id: new mongodb.ObjectId(id) },
     (err, data) => {
       res.json({ state: "sucess" });
-     
     }
   );
 });
