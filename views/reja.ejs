@@ -196,8 +196,8 @@
     <h1>REJA VA MAQSADLAR</h1>
 
     <div class="container">
-      <form class="input-bar" action="/add-item" method="POST">
-        <input type="text" name="reja" placeholder="Yangi reja kiriting..." />
+      <form id="create-form" class="input-bar" action="/add-item" method="POST">
+        <input id="create-field" type="text" name="reja" placeholder="Yangi reja kiriting..." />
         <button type="submit" class="btn btn-add">Yangi Reja Qoshish</button>
       </form>
 
@@ -225,5 +225,8 @@
         </button>
       </form>
     </div>
+
+<script src="https://cdn.jsdelivr.net/npm/axios@<x.x.x>/dist/axios.min.js"></script>
+    <script src="/browser.js"></script>
   </body>
 </html>
