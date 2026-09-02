@@ -14,6 +14,7 @@ fs.readFile("database/user.json", "utf-8", (err, data) => {
 
 // MongoDb chaqirish
 const db = require("./server").db();
+const mongodb = require("mongodb");
 
 // Section 1 Kirish Code
 
@@ -38,6 +39,18 @@ app.post("/add-item", function (req, res) {
     res.json(data.ops[0]);
   });
   res.send({ test: "sucess" });
+});
+
+app.post("/delete-item", (req, res) => {
+  const id = req.body.id;
+  console.log(id);
+  db.collection("plans").deleteOne(
+    { _id: new mongodb.ObjectId(id) },
+    (err, data) => {
+      res.json({ state: "sucess" });
+     
+    }
+  );
 });
 
 app.get("/", function (req, res) {
